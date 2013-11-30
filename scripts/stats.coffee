@@ -15,7 +15,7 @@
 #   juanxo
 
 module.exports = (robot) ->
-  base_stats_url = env.HUBOT_GRAPHITE_URL
+  base_stats_url = process.env.HUBOT_GRAPHITE_URL
   options = 'height=145&width=700&lineMode=connected&hideLegend=true&template=solarized-dark&bgcolor=white&drawNullAsZero=true&hideGrid=true&lineWidth=2&margin=10&tz=Europe/Madrid&format=png'
 
   robot.respond /stats (.*)$/i, (msg) ->
